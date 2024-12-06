@@ -83,7 +83,7 @@ export const FieldSelect = memo(({ path, children, position, withoutValues, isUn
   };
 
   const handleSubmit = (val: string) => {
-    const templatePath = getPathString([path, val]);
+    const templatePath = getPathString([originalPath, val]);
     const template = cloneDeep(get(configSchema, templatePath)) as any;
 
     const replacePattern = replaceValuePatterns.find(({ pattern }) => pattern.test(templatePath));
@@ -93,6 +93,7 @@ export const FieldSelect = memo(({ path, children, position, withoutValues, isUn
     }
 
     const key = getRenamedKey(val);
+
     setConfig((draft) => {
       set(draft, getPathString([path, key]), withoutValues ? getEmptyValueByType(template) : template);
     });
