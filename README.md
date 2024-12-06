@@ -15,3 +15,25 @@ This project generates Traefik configuration files through a web UI. The configu
 ### Export as YAML or TOML
 
 ![Traefik Config Generator](/public/screenshot-3.png)
+
+## Build Instructions
+
+This project is built using Vite and React. Follow the steps below to build the project:
+
+1. **Install Dependencies**:
+
+```sh
+pnpm install
+```
+
+2. **Run Development Server**:
+
+```sh
+pnpm dev
+```
+
+3. **Build for Production**:
+
+```sh
+pnpm build
+```
