@@ -17,7 +17,14 @@ export const Layout = memo(() => {
             </Group>
 
             <Group ml="xl" gap={0} visibleFrom="sm">
-              <ActionIcon color="gray" size="lg" radius={100}>
+              <ActionIcon
+                color="gray"
+                size="lg"
+                radius={100}
+                component="a"
+                target="_blank"
+                href="https://github.com/kadirgun/traefik-config-generator"
+              >
                 <IconBrandGithub size={18} />
               </ActionIcon>
             </Group>
